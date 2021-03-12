@@ -1,0 +1,113 @@
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  -webkit-box-shadow: 0.5rem 0 0.1rem #585b61;
+          box-shadow: 0.5rem 0 0.1rem #585b61;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: white;
+}
+
+header h1 {
+  color: #3992ff;
+}
+
+header nav ul {
+  width: 130rem;
+  min-height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style: none;
+}
+
+header nav ul li {
+  margin: 0 2rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #434c5d;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #8c98af;
+}
+
+header .fas {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    position: relative;
+    min-height: 5rem;
+  }
+  header h1 {
+    position: absolute;
+    left: 2rem;
+  }
+  header nav ul {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    background-color: white;
+    padding-top: 15rem;
+  }
+  header nav ul li {
+    padding: 1rem 0;
+  }
+  header nav ul li a {
+    font-size: 2.4rem;
+  }
+  header #burgerNav {
+    font-size: 3rem;
+    position: absolute;
+    right: 2rem;
+    cursor: pointer;
+  }
+  header #closeNavMob {
+    font-size: 4rem;
+    position: absolute;
+    right: 2rem;
+    cursor: pointer;
+  }
+  header .display-mob {
+    display: block;
+  }
+  header .not-display-mob {
+    display: none;
+  }
+}
+/*# sourceMappingURL=header.css.map */

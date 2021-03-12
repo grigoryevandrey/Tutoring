@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация для тренера</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/registerTeacher.css">
+    <!-- END CSS -->
+    <!-- JS -->
+    <script defer src="/js/header-mobile.js"></script>
+    <script defer src="/js/acceptToRegisterTeacher.js"></script>
+    <!-- END JS -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1 class="logo">
+                L2P.RU
+            </h1>
+            <nav class="not-display-mob">
+                <ul>
+                    <li>
+                        <a href="/search">Поиск</a>
+                    </li>
+                    <li>
+                        <a href="/login">Вход</a>
+                    </li>
+                    <li>
+                        <a href="/registerStudent">Регистрация</a>
+                    </li>
+                </ul>
+            </nav>
+            <i class="fas fa-bars display-mob" id="burgerNav"></i>
+            <i class="fas fa-times not-display-mob" id="closeNavMob"></i>
+        </header>
+        <section>
+            <h2>Зарегистрироваться как тренер</h2>
+            <form action="">
+                <input type="email" class="underlined-input" name="" placeholder="EMAIL">
+                <input type="text" class="underlined-input" name="" placeholder="Никнейм">
+                <input type="password" class="underlined-input" name="" placeholder="Пароль">
+                <input type="password" class="underlined-input" name="" placeholder="Повторите пароль">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" name="accept-policies" id="accept-policies">
+                    <label for="accept-policies">Я согласен с <a href="#">политиками сайта</a></label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" name="accept-conditions" id="accept-conditions">
+                    <label for="accept-conditions">Я согласен с <a href="#">условиями использования</a></label>
+                </div>
+                <input type="submit" value="Зарегистрироваться" id="register-btn" disabled>
+            </form>
+            <a href="/login">Уже зарегестрированы? <span>Войти</span></a>
+            <a href="/registerStudent" class="register-button"><span>Зарегистрироваться</span> как ученик</a>
+        </section>
+
+    </div>
+</body>
+
+</html>

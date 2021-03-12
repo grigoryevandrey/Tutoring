@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <!-- END CSS -->
+    <!-- JS -->
+    <script defer src="/js/header-mobile.js"></script>
+    <script defer src="/js/unlockBtnLogin.js"></script>
+    <!-- END JS -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1 class="logo">
+                L2P.RU
+            </h1>
+            <nav class="not-display-mob">
+                <ul>
+                    <li>
+                        <a href="/search">Поиск</a>
+                    </li>
+                    <li>
+                        <a href="/login">Вход</a>
+                    </li>
+                    <li>
+                        <a href="/registerStudent">Регистрация</a>
+                    </li>
+                </ul>
+            </nav>
+            <i class="fas fa-bars display-mob" id="burgerNav"></i>
+            <i class="fas fa-times not-display-mob" id="closeNavMob"></i>
+        </header>
+        <section>
+            <h2>Вход в личный кабинет</h2>
+            <form action="">
+                <div class="box-for-input">
+                    <input type="email" name="email-input" class="email-input" id="email-input" required pattern="\S+.*"
+                        placeholder=" " />
+                    <label for="email-input" class="email-label">
+                        <span class="content-email">Email</span>
+                    </label>
+                </div>
+                <div class="box-for-input">
+                    <input type="password" name="password-input" id="password-input" class="password-input" required>
+                    <label for="password-input" class="password-label">
+                        <span class="content-password">Пароль</span>
+                    </label>
+                </div>
+                <input type="submit" value="ВОЙТИ" id='submit-btn' disabled>
+
+                <a href="/forgotPassword" id="forgot-pass-link">Я забыл свой пароль</a>
+            </form>
+            <a href="/registerStudent" class="register-button"><span>Зарегистрироваться</span> как ученик</a>
+            <a href="/registerTeacher" class="register-button"><span>Зарегистрироваться</span> как тренер</a>
+        </section>
+    </div>
+</body>
+
+</html>

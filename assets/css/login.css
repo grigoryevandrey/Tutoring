@@ -1,0 +1,173 @@
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+}
+
+section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 45rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 30px;
+  padding: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 0 0.3rem #585b61;
+          box-shadow: 0 0 0.3rem #585b61;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+section form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section h2 {
+  color: #434c5d;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+section form {
+  padding: 3rem 0;
+  position: relative;
+  width: 30rem;
+}
+
+section form .box-for-input {
+  margin: 3rem 0;
+  position: relative;
+  height: 4rem;
+  width: 100%;
+}
+
+section form .box-for-input input {
+  width: 100%;
+  height: 100%;
+  padding-top: 1rem;
+  border: 0;
+  outline: 0;
+  font-size: 1.5rem;
+  color: #434c5d;
+}
+
+section form .box-for-input label {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  border-bottom: 0.01rem solid #a1a8b4;
+  font-size: 1.5rem;
+}
+
+section form .box-for-input label::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: -0.1rem;
+  height: 0%;
+  width: 0%;
+  border-bottom: 0.001rem solid #3992ff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section form .box-for-input label .content-email, section form .box-for-input label .content-password {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: #a1a8b4;
+}
+
+section form .box-for-input .email-input:focus + .email-label .content-email,
+section form .box-for-input .email-input:valid + .email-label .content-email,
+section form .box-for-input .email-input:not(:placeholder-shown) + .email-label .content-email,
+section form .box-for-input .password-input:focus + .password-label .content-password,
+section form .box-for-input .password-input:valid + .password-label .content-password {
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+  font-size: 1.2rem;
+}
+
+section form .box-for-input .email-input:focus + label::after,
+section form .box-for-input .email-input:valid + label::after,
+section form .box-for-input .email-input:not(:placeholder-shown) + label::after,
+section form .box-for-input .password-input:focus + label::after,
+section form .box-for-input .password-input:valid + label::after {
+  width: 100%;
+  border-bottom: 0.1rem solid #3992ff;
+}
+
+section form input[type="submit"] {
+  color: white;
+  background-color: #3992ff;
+  width: 25rem;
+  height: 5rem;
+  border: none;
+  border-radius: 3rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin-top: 3rem;
+}
+
+section form input[type="submit"]:hover {
+  color: #b5d7ff;
+}
+
+section form input[type="submit"]:disabled {
+  background-color: #a1a8b4;
+  cursor: not-allowed;
+}
+
+section form input[type="submit"]:disabled:hover {
+  color: white;
+}
+
+section form #forgot-pass-link {
+  position: absolute;
+  left: 0;
+  top: 20.4rem;
+  font-size: 1.1rem;
+  color: #3992ff;
+  text-decoration: none;
+}
+
+section .register-button {
+  padding-bottom: 1rem;
+  color: #434c5d;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+section .register-button span {
+  color: #3992ff;
+}
+/*# sourceMappingURL=login.css.map */

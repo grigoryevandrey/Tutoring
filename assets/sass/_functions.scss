@@ -1,0 +1,125 @@
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@mixin absoluteCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin wrapperFullPage {
+    width: 100%;
+    min-height: 100vh;
+}
+
+@mixin containerWithForm($pad) {
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    padding: $pad; 
+    align-items: center;
+    box-shadow: 0 0 0.3rem $shadowColor;
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@mixin buttonStyling($w, $h) {
+    color: $whiteColor;
+    background-color: $blueColor;
+    width: $w;
+    height: $h;
+    border: none;
+    border-radius: 3rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+        color: $lighterFontColor;
+    }
+}
+
+@mixin submitBtn {
+    text-transform: uppercase;
+    border:0;
+    background: $blueColor;
+    color: $whiteColor;
+    padding: 2.5rem;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+        color: $lighterFontColor;
+    }
+}
+
+
+@mixin registerLinkStyling {
+    color: $darkFontColor;
+    text-decoration: none;
+    font-size: 1.4rem;
+    span {
+        color: $blueColor;
+    }
+}
+
+@mixin standartH2 {  
+    color: $darkFontColor;
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+@mixin underlinedInput {
+    border: 0;
+    border-bottom: 0.2rem solid $lightFontColor;
+    width: 30rem;
+    height: 4rem;
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+    color: $darkFontColor;
+    &::placeholder {
+        color: $lightFontColor;
+    }
+    &:focus {
+        border-bottom: 0.2rem solid $blueColor;
+    }
+}
+
+@mixin switchBox {background-color: $lightFontColor;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 1rem;
+    box-shadow: inset 0 0 0.5rem $shadowColor;
+    position: relative;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top:0;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background-color: $whiteColor;
+        transform: scale(1.1);
+        box-shadow: 0 0 0.5rem $shadowColor;
+        transition: all 0.5s ease;
+    }
+    &:checked {
+        background-color: $blueColor;
+        &::before {
+            left: 2rem;
+        }
+    }
+}

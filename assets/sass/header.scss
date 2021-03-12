@@ -1,0 +1,90 @@
+@import "./variables";
+@import "./functions";
+
+header {
+    @include flexCenter();
+    width: 100%;
+    box-shadow: 0.5rem 0 0.1rem rgb(88, 91, 97);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    h1 {
+        color: $blueColor;
+    }
+    nav {
+        ul {
+            width: 130rem;
+            min-height: 5rem;
+            @include flexCenter();
+            justify-content: flex-end;
+            list-style: none;   
+            li {
+                margin: 0 2rem;
+                a {
+                    text-decoration: none;
+                    font-size: 1.4rem;
+                    color: $darkFontColor;
+                    transition: 0.3s;
+                    &:hover {
+                        color: $hoverDarkFont;
+                    }
+                }
+            }
+        }
+    }
+    .fas{
+        display: none;
+    }
+}
+
+
+@media (max-width: $widthToMob) {
+    header {
+        position: relative;
+        min-height: 5rem;
+        h1{
+            position: absolute;
+            left: 2rem;
+        }
+        nav {
+            ul {
+                width: 100%;
+                height: 100vh;
+                position: absolute;
+                top: 0;
+                left: 0;
+                flex-direction: column;
+                justify-content: start;
+                background-color: white;
+                padding-top: 15rem;
+                li {
+                    padding: 1rem 0;
+                    a {
+                        font-size: 2.4rem;
+                    }
+                }
+            }
+        }
+        #burgerNav{
+            font-size: 3rem;
+            position: absolute;
+            right: 2rem;
+            cursor: pointer;
+        }
+        #closeNavMob {
+            font-size: 4rem;
+            position: absolute;
+            right: 2rem;
+            cursor: pointer;
+        }
+        .display-mob {
+            display: block;
+        }
+        
+        .not-display-mob {
+            display: none;
+        }
+    }
+
+}

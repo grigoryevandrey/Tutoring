@@ -1,0 +1,59 @@
+@import "./variables";
+@import "./functions";
+
+.wrapper {
+    @include wrapperFullPage();
+}
+section {
+    @include absoluteCenter();
+    top: 45rem;
+    @include containerWithForm(5rem);
+    box-shadow: none;
+    h2 {
+        @include standartH2();
+        margin-bottom: 3rem;
+    }
+    form {     
+        width: 30rem;
+        .underlined-input {
+            @include underlinedInput();
+        }
+        .checkbox-wrapper {
+            margin: 1rem 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            input[type="checkbox"]{
+                @include switchBox();
+            }
+            label {
+                max-width: 23rem;
+                padding-left: 1rem;
+                font-size: 1.5rem;
+                color: $lightFontColor;
+                a {
+                    text-decoration: none;
+                    color: $blueColor;
+                    &:hover {
+                        color: $lighterFontColor;
+                    }
+                }
+            }
+        }  
+        input[type="submit"] {
+            @include submitBtn();
+            margin: 2rem 0;
+            &:disabled {
+                background-color: $lightFontColor;
+                cursor: not-allowed;
+                &:hover {
+                    color: white;
+                }
+            }
+        }    
+    }
+    a {
+        @include registerLinkStyling();
+        padding-top: 1rem;
+    }
+}

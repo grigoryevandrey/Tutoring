@@ -1,0 +1,107 @@
+@import "./variables";
+@import "./functions";
+
+.wrapper {
+    @include wrapperFullPage();
+}
+
+section {
+    @include absoluteCenter();
+    top: 45rem;
+    @include containerWithForm(5rem);
+    box-shadow: none;
+    h2{ 
+        color: $darkFontColor;
+        font-size: 3.5rem;
+        text-align: center;
+    }
+    form {
+        padding: 3rem 0;
+        position: relative;
+        width: 30rem;
+        .box-for-input {
+            margin: 3rem 0;
+            position: relative;
+            height: 4rem;
+            width: 100%;
+            input {
+                width: 100%;
+                height: 100%;
+                padding-top:1rem;
+                border: 0;
+                outline: 0;
+                font-size: 1.5rem;
+                color: $darkFontColor;
+            }
+            label {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 100%;
+                width: 100%;
+                pointer-events: none;
+                border-bottom: 0.01rem solid $lightFontColor;
+                font-size: 1.5rem;
+                &::after{
+                    content:"";
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: -0.1rem;
+                    height: 0%;
+                    width: 0%;
+                    border-bottom: 0.001rem solid $blueColor;
+                    transition: all 0.5s ease;
+                }
+                .content-email, .content-password {
+                    position: absolute;
+                    bottom: 0.5rem;
+                    left: 0;
+                    transition: all 0.5s ease;
+                    color: $lightFontColor;
+                }
+            }
+            .email-input:focus + .email-label .content-email,
+            .email-input:valid + .email-label .content-email,
+            .email-input:not(:placeholder-shown) + .email-label .content-email,
+            .password-input:focus + .password-label .content-password,
+            .password-input:valid + .password-label .content-password {
+                transform: translateY(-150%);
+                font-size: 1.2rem;
+            }
+
+            .email-input:focus + label::after, 
+            .email-input:valid + label::after, 
+            .email-input:not(:placeholder-shown) + label::after, 
+            .password-input:focus + label::after,
+            .password-input:valid+ label::after{
+                width: 100%;
+                border-bottom: 0.1rem solid $blueColor;
+            }
+        }
+        input[type="submit"] {
+            @include buttonStyling(25rem, 5rem);
+            margin-top: 3rem;
+            &:disabled {
+                background-color: $lightFontColor;
+                cursor: not-allowed;
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+        #forgot-pass-link {
+            position: absolute;
+            left: 0;
+            top: 20.4rem;
+            font-size: 1.1rem;
+            color: $blueColor;
+            text-decoration: none;
+        }
+
+    }
+    .register-button {
+        padding-bottom: 1rem;
+        @include registerLinkStyling();
+    }
+}
