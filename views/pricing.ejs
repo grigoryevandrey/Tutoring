@@ -6,11 +6,241 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Цены</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/pricing.css">
+    <link rel="stylesheet" href="/css/mobileNavResponsivenessForLogged.css">
+    <!-- END CSS -->
+    <!-- JS -->
+    <script defer src="/js/header-mobile.js"></script>
+    <script defer src="/js/customDropdownMenu.js"></script>
+    <!-- END JS -->
 </head>
 
 <body>
-    <h1>Pricing</h1>
+    <div class="wrapper">
+        <header>
+            <h1 class="logo">
+                L2P.RU
+            </h1>
+            <nav class="not-display-mob nav-expanded">
+                <ul>
+                    <li>
+                        <a href="/search">Поиск</a>
+                    </li>
+                    <li>
+                        <a href="/login">Вход</a>
+                    </li>
+                    <li>
+                        <a href="/registerStudent">Регистрация</a>
+                    </li>
+                    <li class="not-display-desktop not-display-unauthorized">
+                        <h2>Уроки</h2>
+                    </li>
+                    <li class="not-display-desktop not-display-unauthorized"><a
+                            href="/unscheduledHours">Незапланированные часы</a></li>
+                    <li class="not-display-desktop not-display-unauthorized"><a href="/listView">Список</a></li>
+                    <li class="not-display-desktop not-display-unauthorized"><a href="/calendarView">Календарь</a></li>
+                    <li class="not-display-desktop not-display-unauthorized"><a href="/reviews">Отзывы</a></li>
+                    <li class="not-display-desktop not-display-unauthorized">
+                        <h2>Настройки</h2>
+                    </li>
+                    <li class="not-display-desktop not-display-unauthorized"><a href="/userPageSettings">Профиль</a>
+                    </li>
+                    <li class="not-display-desktop not-display-unauthorized"><a href="/contacts">Контактная
+                            информация</a></li>
+                    <li class="not-display-desktop not-display-unauthorized not-display-student"><a
+                            href="/pricing">Расценки</a></li>
+                    <li class="not-display-desktop not-display-unauthorized not-display-student"><a
+                            href="/availability">Доступность</a>
+                    </li>
+                    <li class="not-display-desktop not-display-unauthorized"><a href="/logout">Выход</a></li>
+                </ul>
+            </nav>
+            <i class="fas fa-bars display-mob" id="burgerNav"></i>
+            <i class="fas fa-times not-display-mob" id="closeNavMob"></i>
+        </header>
+        <main>
+            <aside>
+                <ul>
+                    <h2>Уроки</h2>
+                    <li><a href="/unscheduledHours">Незапланированные часы</a></li>
+                    <li><a href="/listView">Список</a></li>
+                    <li><a href="/calendarView">Календарь</a></li>
+                    <li><a href="/reviews">Отзывы</a></li>
+                    <h2>Настройки</h2>
+                    <li><a href="/userPageSettings">Профиль</a></li>
+                    <li><a href="/contacts">Контактная информация</a></li>
+                    <li class="not-display-student"><a href="/pricing">Расценки</a></li>
+                    <li class="not-display-student"><a href="/availability">Доступность</a></li>
+                    <li><a href="/logout">Выход</a></li>
+                </ul>
+            </aside>
+            <section>
+                <h2>
+                    Установите вашу базовую цену
+                </h2>
+                <form class="price-setter">
+                    <div class="input-box">
+                        <input type="text" name="price-input" required placeholder="Ведите цену за час...">
+                        <label for="price-input">рублей</label>
+                    </div>
+                    <input type="submit" value="Сохранить">
+                    <p>Вы заработаете: <span>400</span> рублей/час</p>
+                </form>
+                <h2>Скидки за наборы</h2>
+                <form class="discount-setter">
+                    <label class="label-for-dropdown">Скидка за первое занятие</label>
+                    <div class="selector-wrapper" id="selector-1">
+                        <div class="select-box">
+                            <div class="options-container">
+                                <div class="option">
+                                    <input type="radio" class="radio" name="first-time-discount"
+                                        id="zero-percent-first-time" />
+                                    <label for="zero-percent-first-time">0%</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" class="radio" name="first-time-discount"
+                                        id="five-percent-first-time" />
+                                    <label for="five-percent-first-time">5%</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" class="radio" name="first-time-discount"
+                                        id="ten-percent-first-time" />
+                                    <label for="ten-percent-first-time">10%</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" class="radio" name="first-time-discount"
+                                        id="fifteen-percent-first-time" />
+                                    <label for="fifteen-percent-first-time">15%</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" class="radio" name="first-time-discount"
+                                        id="twenty-percent-first-time" />
+                                    <label for="twenty-percent-first-time">20%</label>
+                                </div>
+                            </div>
+                            <div class="selected">
+                                0%
+                            </div>
+                        </div>
+                    </div>
+                    <label class="label-for-dropdown">Скидка при покупке 3х уроков за
+                        раз</label>
+                    <div class="selector-wrapper" id="selector-2">
+                        <div class="select-box">
+                            <div class="options-container">
+                                <div class="option">
+                                    <input type="radio" class="radio" name="three-lessons-discount"
+                                        id="zero-percent-three-lessons" />
+                                    <label for="zero-percent-three-lessons">0%</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" class="radio" name="three-lessons-discount"
+                                        id="five-percent-three-lessons" />
+                                    <label for="five-percent-three-lessons">5%</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" class="radio" name="three-lessons-discount"
+                                        id="ten-percent-three-lessons" />
+                                    <label for="ten-percent-three-lessons">10%</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" class="radio" name="three-lessons-discount"
+                                        id="fifteen-percent-three-lessons" />
+                                    <label for="fifteen-percent-three-lessons">15%</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" class="radio" name="three-lessons-discount"
+                                        id="twenty-percent-three-lessons" />
+                                    <label for="twenty-percent-three-lessons">20%</label>
+                                </div>
+                            </div>
+                            <div class="selected">
+                                0%
+                            </div>
+                        </div>
+                    </div>
+                    <label class="label-for-dropdown">Скидка при покупке 5и уроков за
+                        раз</label>
+                    <div class="selector-wrapper" id="selector-3">
+                        <div class="select-box">
+                            <div class="options-container">
+                                <div class="option">
+                                    <input type="radio" class="radio" name="five-lessons-discount"
+                                        id="zero-percent-five-lessons" />
+                                    <label for="zero-percent-five-lessons">0%</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" class="radio" name="five-lessons-discount"
+                                        id="five-percent-five-lessons" />
+                                    <label for="five-percent-five-lessons">5%</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" class="radio" name="five-lessons-discount"
+                                        id="ten-percent-five-lessons" />
+                                    <label for="ten-percent-five-lessons">10%</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" class="radio" name="five-lessons-discount"
+                                        id="fifteen-percent-five-lessons" />
+                                    <label for="fifteen-percent-five-lessons">15%</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" class="radio" name="five-lessons-discount"
+                                        id="twenty-percent-five-lessons" />
+                                    <label for="twenty-percent-five-lessons">20%</label>
+                                </div>
+                            </div>
+                            <div class="selected">
+                                0%
+                            </div>
+                        </div>
+                    </div>
+                    <label class="label-for-dropdown">Скидка при покупке 10и уроков за
+                        раз</label>
+                    <div class="selector-wrapper" id="selector-4">
+                        <div class="select-box">
+                            <div class="options-container">
+                                <div class="option">
+                                    <input type="radio" class="radio" name="ten-lessons-discount"
+                                        id="zero-percent-ten-lessons" />
+                                    <label for="zero-percent-ten-lessons">0%</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" class="radio" name="ten-lessons-discount"
+                                        id="five-percent-ten-lessons" />
+                                    <label for="five-percent-ten-lessons">5%</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" class="radio" name="ten-lessons-discount"
+                                        id="ten-percent-ten-lessons" />
+                                    <label for="ten-percent-ten-lessons">10%</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" class="radio" name="ten-lessons-discount"
+                                        id="fifteen-percent-ten-lessons" />
+                                    <label for="fifteen-percent-ten-lessons">15%</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" class="radio" name="ten-lessons-discount"
+                                        id="twenty-percent-ten-lessons" />
+                                    <label for="twenty-percent-ten-lessons">20%</label>
+                                </div>
+                            </div>
+                            <div class="selected">
+                                0%
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" value="Сохранить">
+                </form>
+            </section>
+        </main>
+    </div>
 </body>
 
 </html>

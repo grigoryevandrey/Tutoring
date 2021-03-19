@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAIA,MAAM,EAAE,SAAS,EAAE,MAAM;EACrB,AAAA,KAAK,CAAC;IACF,OAAO,EAAC,IAAI;GACf;EACD,AAAA,IAAI,CAAC;IACD,qBAAqB,EAAE,GAAG;IAC1B,KAAK,EAAE,GAAG;GACb",
+    "sources": [
+        "../sass/mobileNavResponsivenessForLogged.scss",
+        "../sass/_variables.scss",
+        "../sass/_functions.scss"
+    ],
+    "names": [],
+    "file": "mobileNavResponsivenessForLogged.css"
+}

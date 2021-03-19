@@ -1,17 +1,9 @@
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  -webkit-box-shadow: 0.5rem 0 0.1rem #585b61;
-          box-shadow: 0.5rem 0 0.1rem #585b61;
-  position: -webkit-sticky;
+  box-shadow: 0.5rem 0 0.1rem #585b61;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -20,24 +12,19 @@ header {
 
 header h1 {
   color: #3992ff;
+  width: 10rem;
+  text-align: center;
 }
 
 header nav ul {
-  width: 130rem;
+  width: 120rem;
   min-height: 5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-end;
   list-style: none;
+  background-color: white;
 }
 
 header nav ul li {
@@ -48,7 +35,6 @@ header nav ul li a {
   text-decoration: none;
   font-size: 1.4rem;
   color: #434c5d;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -56,13 +42,21 @@ header nav ul li a:hover {
   color: #8c98af;
 }
 
+header nav ul li h2 {
+  font-size: 3rem;
+}
+
 header .fas {
   display: none;
 }
 
-@media (max-width: 768px) {
+.not-display-desktop {
+  display: none;
+}
+
+@media (max-width: 1300px) {
   header {
-    position: relative;
+    position: sticky;
     min-height: 5rem;
   }
   header h1 {
@@ -71,25 +65,25 @@ header .fas {
   }
   header nav ul {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    flex-direction: column;
+    justify-content: start;
     background-color: white;
     padding-top: 15rem;
   }
   header nav ul li {
-    padding: 1rem 0;
+    padding: 0.5vh 0;
+    text-align: center;
   }
   header nav ul li a {
-    font-size: 2.4rem;
+    text-align: center;
+    font-size: 3vh;
+  }
+  header .nav-expanded ul {
+    padding-top: 4rem;
   }
   header #burgerNav {
     font-size: 3rem;
@@ -108,6 +102,9 @@ header .fas {
   }
   header .not-display-mob {
     display: none;
+  }
+  .not-display-desktop {
+    display: block;
   }
 }
 /*# sourceMappingURL=header.css.map */

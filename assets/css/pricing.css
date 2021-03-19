@@ -1,0 +1,276 @@
+.wrapper {
+  min-width: 130rem;
+  min-height: 100vh;
+  background-color: #edeff1;
+}
+
+@media (max-width: 1300px) {
+  .wrapper {
+    min-width: 32rem;
+  }
+}
+
+main {
+  width: 130rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  column-gap: 2rem;
+  align-items: start;
+  padding-top: 10rem;
+}
+
+main aside {
+  border-radius: 3rem;
+  padding: 3rem;
+  background-color: white;
+}
+
+main aside ul h2 {
+  font-size: 2.8rem;
+  color: #434c5d;
+}
+
+main aside ul li {
+  padding-top: 0.8rem;
+  list-style: none;
+}
+
+main aside ul li a {
+  color: #434c5d;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+main aside ul li a:hover {
+  color: #3992ff;
+}
+
+main section {
+  border-radius: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 3rem 0;
+  background-color: white;
+}
+
+.not-display {
+  display: none;
+}
+
+main section {
+  align-items: flex-start;
+  padding: 3rem;
+}
+
+main section h2 {
+  color: #434c5d;
+  font-size: 3.5rem;
+  text-align: center;
+  font-size: 2.8rem;
+}
+
+main section .price-setter {
+  margin: 1rem 0rem 2rem 0rem;
+  display: grid;
+  grid-template-columns: 45rem auto;
+}
+
+main section .price-setter .input-box {
+  position: relative;
+}
+
+main section .price-setter .input-box input {
+  border: 0;
+  outline: none;
+  border-bottom: 0.2rem solid #a1a8b4;
+  width: 30rem;
+  height: 4rem;
+  margin: 1.5rem 0;
+  font-size: 1.5rem;
+  color: #434c5d;
+}
+
+main section .price-setter .input-box input::placeholder {
+  color: #a1a8b4;
+}
+
+main section .price-setter .input-box input:focus, main section .price-setter .input-box input:valid {
+  border-bottom: 0.2rem solid #3992ff;
+}
+
+main section .price-setter .input-box label {
+  position: absolute;
+  left: 24.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  color: #a1a8b4;
+}
+
+main section .price-setter input[type="submit"] {
+  text-transform: uppercase;
+  border: 0;
+  background: #3992ff;
+  color: white;
+  padding: 2.5rem;
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  transition: 0.5s;
+  padding: 2rem;
+  font-size: 1.4rem;
+  align-self: center;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+main section .price-setter input[type="submit"]:hover {
+  color: #b5d7ff;
+}
+
+main section .price-setter p {
+  font-size: 1.4rem;
+  margin-top: -1.5rem;
+  color: #434c5d;
+}
+
+main section .discount-setter {
+  display: grid;
+  grid-template-columns: 45rem auto;
+  position: relative;
+}
+
+main section .discount-setter .label-for-dropdown {
+  padding: 1rem 0rem;
+  font-size: 1.6rem;
+  color: #434c5d;
+}
+
+main section .discount-setter .selector-wrapper .select-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 13.3rem;
+}
+
+main section .discount-setter .selector-wrapper .select-box .options-container {
+  position: absolute;
+  background-color: white;
+  top: 4rem;
+  width: 100%;
+  box-shadow: 0 0 0.1rem #585b61;
+  font-size: 1.6rem;
+  color: #434c5d;
+  display: none;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.2s;
+  border-radius: 0.5rem;
+}
+
+main section .discount-setter .selector-wrapper .select-box .options-container.active {
+  display: block;
+  max-height: 24rem;
+  opacity: 1;
+  background-color: white;
+  z-index: 10;
+}
+
+main section .discount-setter .selector-wrapper .select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+  top: -0.6rem;
+}
+
+main section .discount-setter .selector-wrapper .select-box .option, main section .discount-setter .selector-wrapper .select-box .selected {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+main section .discount-setter .selector-wrapper .select-box .option:hover {
+  background-color: #e0eaf5;
+}
+
+main section .discount-setter .selector-wrapper .select-box label {
+  cursor: pointer;
+}
+
+main section .discount-setter .selector-wrapper .select-box .selected {
+  font-size: 1.6rem;
+  color: #434c5d;
+  padding-left: 0.85rem;
+  font-weight: 600;
+  position: relative;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.1rem #585b61;
+}
+
+main section .discount-setter .selector-wrapper .select-box .selected::after {
+  content: "";
+  background: url("/img/arrow-dropdown.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 2.2rem;
+  top: 0.6rem;
+  right: 1rem;
+}
+
+main section .discount-setter input[type="submit"] {
+  grid-column: 2;
+  text-transform: uppercase;
+  border: 0;
+  background: #3992ff;
+  color: white;
+  padding: 2.5rem;
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  transition: 0.5s;
+  padding: 2rem;
+  font-size: 1.4rem;
+  align-self: center;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+main section .discount-setter input[type="submit"]:hover {
+  color: #b5d7ff;
+}
+
+@media (max-width: 1300px) {
+  main section {
+    align-items: center;
+  }
+  main section .price-setter {
+    grid-template-columns: 100%;
+  }
+  main section .price-setter p {
+    margin-top: -8.7rem;
+  }
+  main section .price-setter input[type="submit"] {
+    z-index: 5;
+  }
+  main section .discount-setter {
+    grid-template-columns: 100%;
+  }
+  main section .discount-setter label {
+    text-align: center;
+  }
+  main section .discount-setter .selector-wrapper {
+    padding: 2rem 0;
+  }
+  main section .discount-setter .selector-wrapper .select-box {
+    width: 100%;
+  }
+  main section .discount-setter input[type="submit"] {
+    grid-column: 1;
+  }
+}
+/*# sourceMappingURL=pricing.css.map */

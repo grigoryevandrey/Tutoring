@@ -63,8 +63,8 @@ app.get('/search', (req, res) => {
     res.render('searchPage');
 })
 
-app.get('/unsheduledHours', (req, res) => {
-    res.render('unsheduledHours');
+app.get('/unscheduledHours', (req, res) => {
+    res.render('unscheduledHours');
 })
 
 app.get('/userPage', (req, res) => {

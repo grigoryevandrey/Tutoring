@@ -1,0 +1,69 @@
+@import "./variables";
+@import "./functions";
+@import "./defaultMarkupWithAside";
+
+
+main {
+    section { 
+    align-items: flex-start;
+    padding: 3rem;
+        h2 {
+            @include standartH2();
+            font-size: 2.8rem;
+        }
+        .history-box-unit {
+            position: relative;
+            width: 90%;
+            display: flex;
+            align-items: flex-start;
+            padding: 3rem 0;
+            .history-box-info {
+                font-size: 1.4rem;
+                padding: 0 2rem;
+                color: $lightFontColor;
+                a {
+                    color: $blueColor;
+                    text-decoration: none;
+                    &:hover {
+                        color: $lighterFontColor;
+                    }
+                }
+            }
+            .history-unit-cost {
+                font-size: 2.4rem;
+                color: $darkFontColor;
+                margin-left: auto;
+            }
+        }
+        .history-box-unit.underlined {
+            border-bottom: 0.2rem solid $lightFontColor
+        }
+    }
+}
+
+@media (max-width: $widthToMob) {
+    main {
+        section {
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    main {
+        section {
+            .history-box-unit {
+                flex-direction: column;
+                align-items: center;
+                width: auto;
+                .history-box-info {
+                    padding: 2rem 0;
+                }
+                .history-unit-cost {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

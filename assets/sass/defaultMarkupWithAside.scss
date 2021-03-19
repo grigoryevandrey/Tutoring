@@ -1,0 +1,52 @@
+@import "./variables";
+@import "./functions";
+
+.wrapper {
+    @include wrapperFullPage();
+    background-color: $bgColor;
+}
+
+main {
+    width: 130rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 6fr;
+    column-gap: 2rem;
+    align-items: start;
+    padding-top: 10rem;
+    aside {
+        border-radius: $borderRadiusBigBlock;
+        padding: 3rem;
+        background-color: white;
+        ul {
+            h2 {
+                font-size: 2.8rem;
+                color: $darkFontColor;
+            }
+            li {
+                padding-top: 0.8rem;
+                list-style: none;
+                a {
+                    color: $darkFontColor;
+                    text-decoration: none;
+                    font-size: 1.8rem;
+                    &:hover {
+                        color: $blueColor;
+                    }
+                }
+            }
+        }
+    }
+    section {
+        border-radius: $borderRadiusBigBlock;
+        @include flexCenter();
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 3rem 0;
+        background-color: white;
+    }
+}
+
+.not-display {
+    display: none;
+}

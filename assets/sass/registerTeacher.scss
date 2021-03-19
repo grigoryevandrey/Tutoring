@@ -4,6 +4,7 @@
 .wrapper {
     @include wrapperFullPage();
 }
+
 section {
     @include absoluteCenter();
     top: 45rem;
@@ -11,6 +12,7 @@ section {
     box-shadow: none;
     h2 {
         @include standartH2();
+        font-size: 3.4rem;
         margin-bottom: 3rem;
     }
     form {     

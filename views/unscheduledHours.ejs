@@ -6,17 +6,16 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты</title>
+    <title>Незапланированные часы</title>
     <!-- CSS -->
     <link rel="stylesheet" href="/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/contacts.css">
+    <link rel="stylesheet" href="/css/unscheduledHours.css">
     <link rel="stylesheet" href="/css/mobileNavResponsivenessForLogged.css">
     <!-- END CSS -->
     <!-- JS -->
     <script defer src="/js/header-mobile.js"></script>
-    <script defer src="/js/show-contacts-inputs.js"></script>
     <!-- END JS -->
 </head>
 
@@ -45,6 +44,7 @@
                     <li class="not-display-desktop not-display-unauthorized"><a href="/listView">Список</a></li>
                     <li class="not-display-desktop not-display-unauthorized"><a href="/calendarView">Календарь</a></li>
                     <li class="not-display-desktop not-display-unauthorized"><a href="/reviews">Отзывы</a></li>
+                    <li class="not-display-desktop not-display-unauthorized"><a href="/history">История</a></li>
                     <li class="not-display-desktop not-display-unauthorized">
                         <h2>Настройки</h2>
                     </li>
@@ -71,6 +71,7 @@
                     <li><a href="/listView">Список</a></li>
                     <li><a href="/calendarView">Календарь</a></li>
                     <li><a href="/reviews">Отзывы</a></li>
+                    <li><a href="/history">История</a></li>
                     <h2>Настройки</h2>
                     <li><a href="/userPageSettings">Профиль</a></li>
                     <li><a href="/contacts">Контактная информация</a></li>
@@ -80,35 +81,37 @@
                 </ul>
             </aside>
             <section>
-                <h1>Контакты для связи с вами</h1>
-                <form action="">
-                    <div class="box-for-input">
-                        <input type="email" name="email-input" id="email-input" required pattern="\S+.*"
-                            placeholder=" ">
-                        <label for="email-input"><span class="content-input">Email</span></label>
+                <h2>
+                    Незапланированные часы
+                </h2>
+                <div class="unscheduled-hours-box-unit underlined">
+                    <img src="/img/avatar-test-history.jpg" class="avatar-unscheduled-hours" alt="lena-avatar">
+                    <p>Осталось: <span>3</span> часа уроков с <a href=#>'Пупс'</a></p>
+                    <button class="schedule">Запланировать занятие</button>
+                </div>
+                <div class="unscheduled-hours-box-unit underlined">
+                    <img src="/img/avatar-test-history.jpg" class="avatar-unscheduled-hours" alt="lena-avatar">
+                    <p>Осталось: <span>3</span> часа уроков с <a href=#>'Пупс'</a></p>
+                    <button class="schedule">Запланировать занятие</button>
+                </div>
+                <div class="unscheduled-hours-box-unit">
+                    <img src="/img/avatar-test-history.jpg" class="avatar-unscheduled-hours" alt="lena-avatar">
+                    <p>Осталось: <span>3</span> часа уроков с <a href=#>'Пупс'</a></p>
+                    <button class="schedule">Запланировать занятие</button>
+                </div>
+                <div class="modal-screen-wrapper">
+                    <div class="modal-schedule">
+                        <h2>Выберите дату и время, в которые вы хотите провести занятие</h2>
+                        <div class="availability-to-check">
+                            <h4>Время в ближайшую неделю, на которое можно записаться</h4>
+                        </div>
+                        <form>
+                            <input type="date" name="" id="">
+                            <input type="time" name="" id="">
+                            <input type="submit" name="" id="" value="Подтвердить">
+                        </form>
                     </div>
-                    <div class="box-for-input">
-                        <input type="text" name="phone-input" id="phone-input" placeholder=" ">
-                        <label for="phone-input"><span class="content-input">Телефон</span></label>
-                    </div>
-                    <div class="checkbox-wrapper">
-                        <input type="checkbox" name="use-discord" id="use-discord">
-                        <label for="use-discord">Использовать Discord для занятий</label>
-                    </div>
-                    <div class="box-for-input not-display" id="discord-input-box">
-                        <input type="text" name="discord-input" id="discord-input" placeholder=" ">
-                        <label for="discord-input"><span class="content-input">Discord</span></label>
-                    </div>
-                    <div class="checkbox-wrapper">
-                        <input type="checkbox" name="use-skype" id="use-skype">
-                        <label for="use-skype">Использовать Skype для занятий</label>
-                    </div>
-                    <div class="box-for-input not-display" id="skype-input-box">
-                        <input type="text" name="skype-input" id="skype-input" placeholder=" ">
-                        <label for="skype-input"><span class="content-input">Skype</span></label>
-                    </div>
-                    <input type="submit" value="Сохранить">
-                </form>
+                </div>
             </section>
         </main>
     </div>

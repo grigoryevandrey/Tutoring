@@ -1,0 +1,129 @@
+.wrapper {
+  min-width: 130rem;
+  min-height: 100vh;
+  background-color: #edeff1;
+}
+
+@media (max-width: 1300px) {
+  .wrapper {
+    min-width: 32rem;
+  }
+}
+
+main {
+  width: 130rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  column-gap: 2rem;
+  align-items: start;
+  padding-top: 10rem;
+}
+
+main aside {
+  border-radius: 3rem;
+  padding: 3rem;
+  background-color: white;
+}
+
+main aside ul h2 {
+  font-size: 2.8rem;
+  color: #434c5d;
+}
+
+main aside ul li {
+  padding-top: 0.8rem;
+  list-style: none;
+}
+
+main aside ul li a {
+  color: #434c5d;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+main aside ul li a:hover {
+  color: #3992ff;
+}
+
+main section {
+  border-radius: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 3rem 0;
+  background-color: white;
+}
+
+.not-display {
+  display: none;
+}
+
+main section {
+  align-items: flex-start;
+  padding: 3rem;
+}
+
+main section h2 {
+  color: #434c5d;
+  font-size: 3.5rem;
+  text-align: center;
+  font-size: 2.8rem;
+}
+
+main section .history-box-unit {
+  position: relative;
+  width: 90%;
+  display: flex;
+  align-items: flex-start;
+  padding: 3rem 0;
+}
+
+main section .history-box-unit .history-box-info {
+  font-size: 1.4rem;
+  padding: 0 2rem;
+  color: #a1a8b4;
+}
+
+main section .history-box-unit .history-box-info a {
+  color: #3992ff;
+  text-decoration: none;
+}
+
+main section .history-box-unit .history-box-info a:hover {
+  color: #b5d7ff;
+}
+
+main section .history-box-unit .history-unit-cost {
+  font-size: 2.4rem;
+  color: #434c5d;
+  margin-left: auto;
+}
+
+main section .history-box-unit.underlined {
+  border-bottom: 0.2rem solid #a1a8b4;
+}
+
+@media (max-width: 1300px) {
+  main section {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  main section .history-box-unit {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+  }
+  main section .history-box-unit .history-box-info {
+    padding: 2rem 0;
+  }
+  main section .history-box-unit .history-unit-cost {
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=history.css.map */

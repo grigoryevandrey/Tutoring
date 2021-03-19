@@ -1,0 +1,160 @@
+@import "./variables";
+@import "./functions";
+@import "./defaultMarkupWithAside";
+
+main {
+    section {
+    align-items: flex-start;
+    padding: 3rem;
+        h2 {
+            @include standartH2();
+            font-size: 2.8rem;
+        }
+        .price-setter {
+            margin: 1rem 0rem 2rem 0rem;
+            display: grid;
+            grid-template-columns: 45rem auto;
+            .input-box {
+                position: relative;
+                input {
+                    @include underlinedInput();
+                }
+                label {
+                    position: absolute;
+                    left: 24.6rem;
+                    top:50%;
+                    transform: translateY(-50%);
+                    font-size: 1.6rem;
+                    color: $lightFontColor;
+                }
+            }
+            input[type="submit"] {
+                @include submitBtn();
+                padding: 2rem;
+                font-size: 1.4rem;
+                align-self: center;
+                border-radius: 1rem;
+                margin-top: 2rem;
+            }
+            p {
+                font-size: 1.4rem;
+                margin-top: -1.5rem;
+                color: $darkFontColor;
+            }
+        }
+        .discount-setter {
+            display: grid;
+            grid-template-columns: 45rem auto;
+            position: relative;
+            .label-for-dropdown {
+                padding: 1rem 0rem;
+                font-size: 1.6rem;
+                color: $darkFontColor;
+            }
+            .selector-wrapper {
+                .select-box {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 13.3rem;
+                    .options-container {
+                        position: absolute;
+                        background-color: $whiteColor;
+                        top: 4rem;
+                        width: 100%;
+                        box-shadow: 0 0 0.1rem $shadowColor;
+                        font-size: 1.6rem;
+                        color: $darkFontColor;
+                        display: none;
+                        opacity: 0;
+                        max-height: 0;
+                        transition: all 0.2s;
+                        border-radius: 0.5rem;
+                    }
+                    .options-container.active {
+                        display: block;
+                        max-height: 24rem;
+                        opacity: 1;
+                        background-color: $whiteColor;
+                        z-index: 10;
+                    }
+                    .options-container.active + .selected::after {
+                        transform: rotateX(180deg);
+                        top: -0.6rem;
+                    }
+                    .option, .selected {
+                        padding: 0.5rem;
+                        cursor: pointer;
+                    }
+                    .option:hover {
+                        background-color: $lightestBlue;
+                    }
+                    label {
+                        cursor: pointer;
+                    }
+                    .selected {
+                        font-size: 1.6rem;
+                        color: $darkFontColor;
+                        padding-left: 0.85rem;
+                        font-weight: 600;
+                        position: relative;
+                        border-radius: 0.5rem;
+                        box-shadow: 0 0 0.1rem $shadowColor;
+                        &::after {
+                            content:"";
+                            background: url("/img/arrow-dropdown.svg");
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            position: absolute;
+                            height: 100%;
+                            width: 2.2rem;
+                            top:0.6rem;
+                            right: 1rem;
+                        }
+                    }
+                }
+            }
+            input[type="submit"] {
+                grid-column: 2;
+                @include submitBtn();
+                padding: 2rem;
+                font-size: 1.4rem;
+                align-self: center;
+                border-radius: 1rem;
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: $widthToMob) {
+    main {
+        section {
+            align-items:center;
+            .price-setter {
+                grid-template-columns: 100%;
+                p {
+                    margin-top: -8.7rem;
+                }            
+                input[type="submit"] {
+                    z-index: 5;
+                }
+            }
+            .discount-setter {
+                grid-template-columns: 100%;    
+                label {
+                text-align: center;        
+                }
+                .selector-wrapper {
+                    padding: 2rem 0;
+                    .select-box {
+                        width: 100%;
+                    }
+                }
+                input[type="submit"] {
+                    grid-column: 1;
+                }
+            }
+        }
+    }
+}

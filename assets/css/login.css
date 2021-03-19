@@ -1,44 +1,33 @@
 .wrapper {
-  width: 100%;
+  min-width: 130rem;
   min-height: 100vh;
+}
+
+@media (max-width: 1300px) {
+  .wrapper {
+    min-width: 32rem;
+  }
 }
 
 section {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   top: 45rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   border-radius: 30px;
   padding: 5rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-shadow: 0 0 0.3rem #585b61;
-          box-shadow: 0 0 0.3rem #585b61;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  align-items: center;
+  box-shadow: 0 0 0.3rem #585b61;
+  box-shadow: none;
 }
 
 section form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 section h2 {
@@ -85,13 +74,11 @@ section form .box-for-input label::after {
   content: "";
   position: absolute;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   bottom: -0.1rem;
   height: 0%;
   width: 0%;
   border-bottom: 0.001rem solid #3992ff;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -99,7 +86,6 @@ section form .box-for-input label .content-email, section form .box-for-input la
   position: absolute;
   bottom: 0.5rem;
   left: 0;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   color: #a1a8b4;
 }
@@ -109,8 +95,7 @@ section form .box-for-input .email-input:valid + .email-label .content-email,
 section form .box-for-input .email-input:not(:placeholder-shown) + .email-label .content-email,
 section form .box-for-input .password-input:focus + .password-label .content-password,
 section form .box-for-input .password-input:valid + .password-label .content-password {
-  -webkit-transform: translateY(-150%);
-          transform: translateY(-150%);
+  transform: translateY(-150%);
   font-size: 1.2rem;
 }
 
@@ -133,7 +118,6 @@ section form input[type="submit"] {
   font-size: 1.8rem;
   letter-spacing: 0.2rem;
   cursor: pointer;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   margin-top: 3rem;
 }

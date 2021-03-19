@@ -1,0 +1,10 @@
+@media (max-width: 1300px) {
+  aside {
+    display: none;
+  }
+  main {
+    grid-template-columns: 1fr;
+    width: 97%;
+  }
+}
+/*# sourceMappingURL=mobileNavResponsivenessForLogged.css.map */

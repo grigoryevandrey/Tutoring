@@ -1,0 +1,83 @@
+@import "./variables";
+@import "./functions";
+
+.wrapper {
+    @include wrapperFullPage();
+    background-color: $bgColor;
+}
+
+main {
+    width: 130rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 6fr;
+    column-gap: 2rem;
+    align-items: start;
+    padding-top: 10rem;
+    aside {
+        border-radius: $borderRadiusBigBlock;
+        padding: 3rem;
+        background-color: white;
+        ul {
+            h2 {
+                font-size: 2.8rem;
+                color: $darkFontColor;
+            }
+            li {
+                padding-top: 0.8rem;
+                list-style: none;
+                a {
+                    color: $darkFontColor;
+                    text-decoration: none;
+                    font-size: 1.8rem;
+                    &:hover {
+                        color: $blueColor;
+                    }
+                }
+            }
+        }
+    }
+    section {
+        border-radius: $borderRadiusBigBlock;
+        @include flexCenter();
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 3rem 0;
+        background-color: white;
+        h1 {
+            font-size: 2.8rem;
+            color: $darkFontColor;
+            text-align: center;
+        }
+        form {
+            width: 30rem;
+            @include inputNoTransition();
+            .checkbox-wrapper {
+                margin: 2rem 0;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                input[type="checkbox"]{
+                    @include switchBox();
+                }
+                label {
+                    max-width: 23rem;
+                    padding-left: 1rem;
+                    font-size: 1.5rem;
+                    color: $lightFontColor;
+                }
+            }
+            input[type="submit"] {
+                @include submitBtn();
+                letter-spacing: 0.2rem;
+                padding: 2rem 5rem;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.not-display {
+    display: none;
+}

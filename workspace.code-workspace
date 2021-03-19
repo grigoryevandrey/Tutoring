@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": ".git"
+		},
+		{
+			"path": "assets"
+		},
+		{
+			"path": "img"
+		},
+		{
+			"path": "node_modules"
+		},
+		{
+			"path": "old"
+		},
+		{
+			"path": "views"
+		}
+	]
+}

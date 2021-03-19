@@ -1,50 +1,40 @@
 .wrapper {
-  width: 100%;
+  min-width: 130rem;
   min-height: 100vh;
+}
+
+@media (max-width: 1300px) {
+  .wrapper {
+    min-width: 32rem;
+  }
 }
 
 section {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   top: 45rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   border-radius: 30px;
   padding: 5rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-shadow: 0 0 0.3rem #585b61;
-          box-shadow: 0 0 0.3rem #585b61;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  align-items: center;
+  box-shadow: 0 0 0.3rem #585b61;
+  box-shadow: none;
 }
 
 section form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 section h2 {
   color: #434c5d;
   font-size: 3.5rem;
   text-align: center;
+  font-size: 3.4rem;
   margin-bottom: 3rem;
 }
 
@@ -54,6 +44,7 @@ section form {
 
 section form .underlined-input {
   border: 0;
+  outline: none;
   border-bottom: 0.2rem solid #a1a8b4;
   width: 30rem;
   height: 4rem;
@@ -62,35 +53,19 @@ section form .underlined-input {
   color: #434c5d;
 }
 
-section form .underlined-input::-webkit-input-placeholder {
-  color: #a1a8b4;
-}
-
-section form .underlined-input:-ms-input-placeholder {
-  color: #a1a8b4;
-}
-
-section form .underlined-input::-ms-input-placeholder {
-  color: #a1a8b4;
-}
-
 section form .underlined-input::placeholder {
   color: #a1a8b4;
 }
 
-section form .underlined-input:focus {
+section form .underlined-input:focus, section form .underlined-input:valid {
   border-bottom: 0.2rem solid #3992ff;
 }
 
 section form .checkbox-wrapper {
   margin: 1rem 0;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 section form .checkbox-wrapper input[type="checkbox"] {
@@ -98,10 +73,8 @@ section form .checkbox-wrapper input[type="checkbox"] {
   width: 4rem;
   height: 2rem;
   border-radius: 1rem;
-  -webkit-box-shadow: inset 0 0 0.5rem #585b61;
-          box-shadow: inset 0 0 0.5rem #585b61;
+  box-shadow: inset 0 0 0.5rem #585b61;
   position: relative;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   cursor: pointer;
 }
@@ -115,11 +88,8 @@ section form .checkbox-wrapper input[type="checkbox"]::before {
   height: 2rem;
   border-radius: 50%;
   background-color: white;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-box-shadow: 0 0 0.5rem #585b61;
-          box-shadow: 0 0 0.5rem #585b61;
-  -webkit-transition: all 0.5s ease;
+  transform: scale(1.1);
+  box-shadow: 0 0 0.5rem #585b61;
   transition: all 0.5s ease;
 }
 
@@ -157,7 +127,6 @@ section form input[type="submit"] {
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
   cursor: pointer;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   margin: 2rem 0;
 }

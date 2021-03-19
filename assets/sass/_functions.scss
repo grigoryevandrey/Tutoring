@@ -12,9 +12,12 @@
     transform: translate(-50%, -50%);
 }
 
-@mixin wrapperFullPage {
-    width: 100%;
+@mixin wrapperFullPage {    
+    min-width: 130rem;
     min-height: 100vh;
+    @media (max-width: $widthToMob) {
+        min-width: 32rem;
+    }
 }
 
 @mixin containerWithForm($pad) {
@@ -81,6 +84,7 @@
 
 @mixin underlinedInput {
     border: 0;
+    outline: none;
     border-bottom: 0.2rem solid $lightFontColor;
     width: 30rem;
     height: 4rem;
@@ -90,12 +94,14 @@
     &::placeholder {
         color: $lightFontColor;
     }
-    &:focus {
+    &:focus,
+    &:valid {
         border-bottom: 0.2rem solid $blueColor;
     }
 }
 
-@mixin switchBox {background-color: $lightFontColor;
+@mixin switchBox {
+    background-color: $lightFontColor;
     width: 4rem;
     height: 2rem;
     border-radius: 1rem;
@@ -122,4 +128,57 @@
             left: 2rem;
         }
     }
+}
+
+
+@mixin inputNoTransition {
+        .box-for-input {
+            margin: 3rem 0;
+            position: relative;
+            height: 4rem;
+            width: 100%;
+            input {
+                width: 100%;
+                height: 100%;
+                padding-top:1rem;
+                border: 0;
+                outline: 0;
+                font-size: 1.5rem;
+                color: $darkFontColor;
+            }
+            label {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 100%;
+                width: 100%;
+                pointer-events: none;
+                border-bottom: 0.01rem solid $lightFontColor;
+                font-size: 1.5rem;
+                &::after{
+                    content:"";
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: -0.1rem;
+                    height: 0%;
+                    width: 0%;
+                    border-bottom: 0.001rem solid $blueColor;
+                }
+                .content-input {
+                    position: absolute;
+                    bottom: 0.5rem;
+                    left: 0;
+                    color: $lightFontColor;
+                }
+            }
+            input:not(:placeholder-shown) + label .content-input{
+                transform: translateY(-150%);
+                font-size: 1.2rem;
+            }
+            input:not(:placeholder-shown) + label::after{
+                width: 100%;
+                border-bottom: 0.1rem solid $blueColor;
+            }
+        }
 }

@@ -1,0 +1,13 @@
+@import "./variables";
+@import "./functions";
+
+
+@media (max-width: $widthToMob) {
+    aside {
+        display:none;
+    }       
+    main {
+        grid-template-columns: 1fr;
+        width: 97%;
+    }
+}
