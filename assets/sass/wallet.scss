@@ -1,0 +1,49 @@
+@import "./variables";
+@import "./functions";
+@import "./defaultMarkupWithAside";
+
+main {
+    section {
+        align-items: flex-start;
+        padding: 3rem;
+        h2 {
+            @include standartH2();
+            font-size: 2.8rem;
+        }
+        p {
+            align-self: center;
+        }
+        p.balance-current {
+            @include standartH2();
+            font-size: 3.8rem;
+            padding-top: 2rem;
+        }
+        p.balance-awaiting {
+            text-align: center;
+            font-size: 2rem;
+            color: $lightFontColor;
+            padding-bottom: 2rem;
+        }
+        .withdraw-btn {
+            @include submitBtn();
+            font-size: 1.6rem;
+            letter-spacing: normal;
+            padding: 2rem;
+            margin-left: auto;
+            margin-bottom: auto;
+        }
+    }
+}
+
+
+@media (max-width: $widthToMob) {
+    main {
+        section {
+            justify-content: center;
+            align-items: center;
+        }
+        .withdraw-btn {
+            margin: auto;
+        }
+    }
+}
