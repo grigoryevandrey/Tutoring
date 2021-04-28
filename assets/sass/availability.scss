@@ -1,0 +1,70 @@
+@import "./variables";
+@import "./functions";
+@import "./defaultMarkupWithAside";
+
+main {
+    user-select: none;
+    section { 
+    align-items: flex-start;
+    padding: 3rem;
+        form {
+            width: 100%;  
+            .availability-table {
+                display: flex;
+                width: 100%;
+                justify-content: space-around;
+                .table-column {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    .table-day {
+                        display: block;
+                        height: 4rem;
+                        font-size: 2rem;
+                        text-align: center;
+                        color: $darkFontColor;
+                    }
+                    .table-hour {
+                        display: flex;
+                        height: 3.9rem;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1.5rem;
+                        color: $darkFontColor;
+                    }
+                    .hour-checkbox {  
+                        display: block;
+                        position: relative;      
+                        height: 3.5rem;
+                        width: 100%;
+                        margin: 0.2rem 0rem;
+                        cursor: pointer;
+                        .hour-checkmark {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 3.5rem;
+                            margin: 0.2rem;
+                            min-width: 90%;
+                            border: 0.1rem solid $blueColor;
+                            border-radius: 0.5rem;
+                        } 
+        
+                    }
+                    .hour-checkbox input:checked ~ .hour-checkmark {
+                        background: $blueColor;
+                    }  
+                    .hour-checkbox input:checked ~ .hour-checkmark::after {
+                        content: attr(data-value);
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: $whiteColor;
+                        font-size: 1.5rem;   
+                    }
+                }
+            }
+      }
+    }
+}

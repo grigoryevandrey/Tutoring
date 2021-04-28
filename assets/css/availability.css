@@ -1,0 +1,139 @@
+.wrapper {
+  min-width: 130rem;
+  min-height: 100vh;
+  background-color: #edeff1;
+}
+
+@media (max-width: 1300px) {
+  .wrapper {
+    min-width: 32rem;
+  }
+}
+
+main {
+  width: 130rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  column-gap: 2rem;
+  align-items: start;
+  padding-top: 10rem;
+}
+
+main aside {
+  border-radius: 3rem;
+  padding: 3rem;
+  background-color: white;
+}
+
+main aside ul h2 {
+  font-size: 2.8rem;
+  color: #434c5d;
+}
+
+main aside ul li {
+  padding-top: 0.8rem;
+  list-style: none;
+}
+
+main aside ul li a {
+  color: #434c5d;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+main aside ul li a:hover {
+  color: #3992ff;
+}
+
+main section {
+  border-radius: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 3rem 0;
+  background-color: white;
+}
+
+.not-display {
+  display: none;
+}
+
+main {
+  user-select: none;
+}
+
+main section {
+  align-items: flex-start;
+  padding: 3rem;
+}
+
+main section form {
+  width: 100%;
+}
+
+main section form .availability-table {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+main section form .availability-table .table-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+main section form .availability-table .table-column .table-day {
+  display: block;
+  height: 4rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #434c5d;
+}
+
+main section form .availability-table .table-column .table-hour {
+  display: flex;
+  height: 3.9rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #434c5d;
+}
+
+main section form .availability-table .table-column .hour-checkbox {
+  display: block;
+  position: relative;
+  height: 3.5rem;
+  width: 100%;
+  margin: 0.2rem 0rem;
+  cursor: pointer;
+}
+
+main section form .availability-table .table-column .hour-checkbox .hour-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3.5rem;
+  margin: 0.2rem;
+  min-width: 90%;
+  border: 0.1rem solid #3992ff;
+  border-radius: 0.5rem;
+}
+
+main section form .availability-table .table-column .hour-checkbox input:checked ~ .hour-checkmark {
+  background: #3992ff;
+}
+
+main section form .availability-table .table-column .hour-checkbox input:checked ~ .hour-checkmark::after {
+  content: attr(data-value);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=availability.css.map */

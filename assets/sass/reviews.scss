@@ -1,0 +1,76 @@
+@import "./variables";
+@import "./functions";
+@import "./defaultMarkupWithAside";
+
+main {
+    section { 
+    align-items: flex-start;
+    padding: 3rem; 
+        h2 {
+            @include standartH2();
+            font-size: 2.8rem;
+        }
+        .review-box-unit {            
+            position: relative;
+            width: 90%;
+            display: flex;
+            align-items: flex-start;
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+            .review-box-info {
+                font-size: 1.4rem;
+                padding-left:  2rem;
+                color: $lightFontColor;
+                display: grid;
+                grid-template-columns: 80% 20%;
+                .review-stars {
+                    display:flex;
+                    .star-box {
+                        color: $blueColor;
+                        font-size: 2.2rem;
+                    }
+                }
+                .review-name {
+                    font-size: 1.6rem;
+                }
+                p {
+                    padding-bottom: 1rem;
+                }
+                .review-text {
+                    grid-column: 1/3;
+                }
+            }
+        }
+        .review-box-unit.underlined {
+            border-bottom: 0.2rem solid $lightFontColor
+        }
+    }
+}
+
+@media (max-width: $widthToMob) {
+    main {
+        section {
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    main {
+        section {
+            .review-box-unit {
+                flex-direction: column;
+                align-items: center;
+                width: auto;
+                .review-box-info {
+                    padding: 1rem 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

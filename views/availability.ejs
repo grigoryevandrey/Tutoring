@@ -6,11 +6,94 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Доступность</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/availability.css">
+    <link rel="stylesheet" href="/css/mobileNavResponsivenessForLogged.css">
+    <!-- END CSS -->
+    <!-- JS -->
+    <script defer src="/js/header-mobile.js"></script>
+    <script defer src="/js/availability-table.js"></script>
+    <!-- END JS -->
 </head>
 
 <body>
-    <h1>Availability</h1>
+    <div class="wrapper">
+        <header>
+            <h1 class="logo">
+                L2P.RU
+            </h1>
+            <nav class="not-display-mob nav-expanded">
+                <ul>
+                    <li>
+                        <a href="/search">Поиск</a>
+                    </li>
+                    <li>
+                        <a href="/login">Вход</a>
+                    </li>
+                    <li>
+                        <a href="/registerStudent">Регистрация</a>
+                    </li>
+                    <li class="not-display-desktop not-display-unauthorized">
+                        <h2>Уроки</h2>
+                    </li>
+                    <li class="not-display-desktop not-display-unauthorized"><a
+                            href="/unscheduledHours">Незапланированные часы</a></li>
+                    <li class="not-display-desktop not-display-unauthorized"><a href="/listView">Список</a></li>
+                    <li class="not-display-desktop not-display-unauthorized"><a href="/calendarView">Календарь</a></li>
+                    <li class="not-display-desktop not-display-unauthorized"><a href="/reviews">Отзывы</a></li>
+                    <li class="not-display-desktop not-display-unauthorized"><a href="/history">История</a></li>
+                    <li class="not-display-desktop not-display-unauthorized">
+                        <h2>Настройки</h2>
+                    </li>
+                    <li class="not-display-desktop not-display-unauthorized"><a href="/userPageSettings">Профиль</a>
+                    </li>
+                    <li class="not-display-desktop not-display-unauthorized"><a href="/contacts">Контактная
+                            информация</a></li>
+                    <li class="not-display-desktop not-display-unauthorized not-display-student"><a
+                            href="/pricing">Расценки</a></li>
+                    <li class="not-display-desktop not-display-unauthorized not-display-student"><a
+                            href="/availability">Доступность</a>
+                    </li>
+                    <li class="not-display-desktop not-display-unauthorized"><a href="/logout">Выход</a></li>
+                </ul>
+            </nav>
+            <i class="fas fa-bars display-mob" id="burgerNav"></i>
+            <i class="fas fa-times not-display-mob" id="closeNavMob"></i>
+        </header>
+        <main>
+            <aside>
+                <ul>
+                    <h2>Уроки</h2>
+                    <li><a href="/unscheduledHours">Незапланированные часы</a></li>
+                    <li><a href="/listView">Список</a></li>
+                    <li><a href="/calendarView">Календарь</a></li>
+                    <li><a href="/reviews">Отзывы</a></li>
+                    <li><a href="/history">История</a></li>
+                    <h2>Настройки</h2>
+                    <li><a href="/userPageSettings">Профиль</a></li>
+                    <li><a href="/contacts">Контактная информация</a></li>
+                    <li class="not-display-student"><a href="/pricing">Расценки</a></li>
+                    <li class="not-display-student"><a href="/availability">Доступность</a></li>
+                    <li><a href="/logout">Выход</a></li>
+                </ul>
+            </aside>
+            <section>
+                <form action="">
+                    <div class="availability-table">
+
+                    </div>
+                    <!-- <label for="Mon1" class="hour-checkbox">
+                        <input type="checkbox" name="" id="Mon1">
+                        <span class="hour-checkmark"></span>
+                    </label> -->
+                </form>
+            </section>
+        </main>
+    </div>
 </body>
 
 </html>
