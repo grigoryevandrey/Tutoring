@@ -3,13 +3,72 @@
 @import "./defaultMarkupWithAside";
 
 main {
-    user-select: none;
     section { 
     align-items: flex-start;
     padding: 3rem;
+        .tips {
+            width: 100%;
+            h2 {
+                @include standartH2();
+                text-align: start;
+                font-size: 2.8rem;
+                margin-bottom: 2rem;
+            }
+            h3 {
+                font-size: 2.4rem;
+                color: $darkFontColor;
+                margin: 2rem 0rem;
+            }
+            p {
+                margin-left: 4rem;
+                position: relative;
+                font-size: 1.6rem;
+                color: $darkFontColor;
+                padding: 1rem 0rem;  
+                .bold {
+                    font-weight: 600;
+                }             
+                .circle {
+                    display: block;
+                    height: 2.7rem;
+                    width: 2.7rem;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: -4rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                .blue-circle {
+                    background: $blueColor;
+                }
+                .lightblue-circle {
+                    background: $teal;
+                }
+                .empty-circle {
+                    border: 0.2rem solid $blueColor;
+                }
+            }
+            .control-section {
+                .checkbox-wrapper {                
+                    margin: 2rem 0;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    input[type="checkbox"] {
+                        @include switchBox();
+                    }
+                    label {
+                        margin-left: 2rem;
+                        font-size: 2rem;
+                        color: $darkFontColor;
+                    }
+                }
+            }
+        }
         form {
             width: 100%;  
             .availability-table {
+                user-select: none;
                 display: flex;
                 width: 100%;
                 justify-content: space-around;
@@ -65,6 +124,50 @@ main {
                     }
                 }
             }
+            input[type="submit"] {
+                @include submitBtn();
+                letter-spacing: 0.2rem;
+                padding: 2rem 5rem;
+                display: block;
+                margin-top: 3rem;
+                margin-bottom: 3rem;
+                margin-left: auto;
+            }
       }
+    }
+}
+
+@media (max-width: 568px) {
+main {
+    section {
+        .tips {
+            text-align: center;
+            h2 {
+                text-align: center;
+            }
+            p {
+                text-align: start;
+            }
+        }
+        form {
+            .availability-table {
+                .table-column {
+                    .table-hour {
+                        font-size: 1.2rem;
+                        text-align: start;
+                    }
+                    .hour-checkbox input:checked ~ .hour-checkmark::after {
+                        content: ""; 
+                    }
+                }
+            }
+            input[type="submit"] {
+                margin: 3rem auto;
+            }
+        }
+    }
+}
+    .not-display-mob {
+        display: none;
     }
 }

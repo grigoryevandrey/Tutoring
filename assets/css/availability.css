@@ -61,13 +61,109 @@ main section {
   display: none;
 }
 
-main {
-  user-select: none;
-}
-
 main section {
   align-items: flex-start;
   padding: 3rem;
+}
+
+main section .tips {
+  width: 100%;
+}
+
+main section .tips h2 {
+  color: #434c5d;
+  font-size: 3.5rem;
+  text-align: center;
+  text-align: start;
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+}
+
+main section .tips h3 {
+  font-size: 2.4rem;
+  color: #434c5d;
+  margin: 2rem 0rem;
+}
+
+main section .tips p {
+  margin-left: 4rem;
+  position: relative;
+  font-size: 1.6rem;
+  color: #434c5d;
+  padding: 1rem 0rem;
+}
+
+main section .tips p .bold {
+  font-weight: 600;
+}
+
+main section .tips p .circle {
+  display: block;
+  height: 2.7rem;
+  width: 2.7rem;
+  border-radius: 50%;
+  position: absolute;
+  left: -4rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+main section .tips p .blue-circle {
+  background: #3992ff;
+}
+
+main section .tips p .lightblue-circle {
+  background: #53EDC5;
+}
+
+main section .tips p .empty-circle {
+  border: 0.2rem solid #3992ff;
+}
+
+main section .tips .control-section .checkbox-wrapper {
+  margin: 2rem 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+main section .tips .control-section .checkbox-wrapper input[type="checkbox"] {
+  background-color: #a1a8b4;
+  width: 4rem;
+  height: 2rem;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 0.5rem #585b61;
+  position: relative;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+main section .tips .control-section .checkbox-wrapper input[type="checkbox"]::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: white;
+  transform: scale(1.1);
+  box-shadow: 0 0 0.5rem #585b61;
+  transition: all 0.5s ease;
+}
+
+main section .tips .control-section .checkbox-wrapper input[type="checkbox"]:checked {
+  background-color: #3992ff;
+}
+
+main section .tips .control-section .checkbox-wrapper input[type="checkbox"]:checked::before {
+  left: 2rem;
+}
+
+main section .tips .control-section .checkbox-wrapper label {
+  margin-left: 2rem;
+  font-size: 2rem;
+  color: #434c5d;
 }
 
 main section form {
@@ -75,6 +171,7 @@ main section form {
 }
 
 main section form .availability-table {
+  user-select: none;
   display: flex;
   width: 100%;
   justify-content: space-around;
@@ -135,5 +232,53 @@ main section form .availability-table .table-column .hour-checkbox input:checked
   transform: translate(-50%, -50%);
   color: white;
   font-size: 1.5rem;
+}
+
+main section form input[type="submit"] {
+  text-transform: uppercase;
+  border: 0;
+  background: #3992ff;
+  color: white;
+  padding: 2.5rem;
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  transition: 0.5s;
+  letter-spacing: 0.2rem;
+  padding: 2rem 5rem;
+  display: block;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: auto;
+}
+
+main section form input[type="submit"]:hover {
+  color: #b5d7ff;
+}
+
+@media (max-width: 568px) {
+  main section .tips {
+    text-align: center;
+  }
+  main section .tips h2 {
+    text-align: center;
+  }
+  main section .tips p {
+    text-align: start;
+  }
+  main section form .availability-table .table-column .table-hour {
+    font-size: 1.2rem;
+    text-align: start;
+  }
+  main section form .availability-table .table-column .hour-checkbox input:checked ~ .hour-checkmark::after {
+    content: "";
+  }
+  main section form input[type="submit"] {
+    margin: 3rem auto;
+  }
+  .not-display-mob {
+    display: none;
+  }
 }
 /*# sourceMappingURL=availability.css.map */

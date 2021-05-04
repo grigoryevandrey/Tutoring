@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    //8 столбцов
+    //25 строк
     const tableBox = document.querySelector('.availability-table');
 
     //mouse events
@@ -16,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+
     //functions
     const addColumn = columns => {
         let newDiv = document.createElement('div');
@@ -28,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             case 1:
                 break;
             case 2:
-                newSpan.textContent = 'Пон';
+                newSpan.textContent = 'Пн';
                 break;
             case 3:
                 newSpan.textContent = 'Вт';
@@ -105,6 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (cols !== 1) {
+                // Создание чекбокса часа
+
                 let newCheckBox = document.createElement('input');
                 let newLabel = document.createElement('label');
                 let newSpan = document.createElement('span');
@@ -117,6 +122,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 newLabel.append(newCheckBox);
                 newLabel.append(newSpan);
                 tableColumns[cols - 1].append(newLabel);
+
+                // Ивенты для работы с перетаскиванием зажатой мыши 
+
+                //при клике смена состояния произойдет с помощью следующих ивентов, поэтому дефолтный убираем
+                newLabel.addEventListener('click', (e) => {
+                    e.preventDefault();
+                })
+
+                //меняем состояние при клике
+                newLabel.addEventListener('mousedown', (e) => {
+                    if (!e.target.matches("label") && !newCheckBox.disabled) newCheckBox.checked ? newCheckBox.checked = false : newCheckBox.checked = true;
+                })
+
+                //меняем состояние при удерживании лкм и наезде мышки на элемент
                 newLabel.addEventListener('mouseover', (e) => {
                     if (isPressed && !e.target.matches("label") && !newCheckBox.disabled) newCheckBox.checked ? newCheckBox.checked = false : newCheckBox.checked = true;
                 });
@@ -125,7 +144,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-
-    //8 столбцов
-    //25 строк
 });
