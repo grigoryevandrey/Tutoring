@@ -79,7 +79,7 @@ section form .checkbox-wrapper input[type="checkbox"] {
 }
 
 section form .checkbox-wrapper input[type="checkbox"]::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;

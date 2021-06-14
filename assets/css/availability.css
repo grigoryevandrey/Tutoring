@@ -139,7 +139,7 @@ main section .tips .control-section .checkbox-wrapper input[type="checkbox"] {
 }
 
 main section .tips .control-section .checkbox-wrapper input[type="checkbox"]::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;

@@ -14,6 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
         optionsList.forEach(option => {
             option.addEventListener('click', () => {
                 selected.innerHTML = option.querySelector('label').innerHTML;
+                selected.style.color = "rgb(67, 76, 93)";
                 optionsContainer.classList.remove('active');
             })
         })

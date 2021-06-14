@@ -1,0 +1,369 @@
+.wrapper {
+  min-width: 130rem;
+  min-height: 100vh;
+  background-color: #edeff1;
+}
+
+@media (max-width: 1300px) {
+  .wrapper {
+    min-width: 32rem;
+  }
+}
+
+main {
+  width: 130rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  column-gap: 2rem;
+  align-items: start;
+  padding-top: 10rem;
+}
+
+main aside {
+  border-radius: 3rem;
+  padding: 3rem;
+  background-color: white;
+}
+
+main aside ul h2 {
+  font-size: 2.8rem;
+  color: #434c5d;
+}
+
+main aside ul li {
+  padding-top: 0.8rem;
+  list-style: none;
+}
+
+main aside ul li a {
+  color: #434c5d;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+main aside ul li a:hover {
+  color: #3992ff;
+}
+
+main section {
+  border-radius: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 3rem 0;
+  background-color: white;
+}
+
+.not-display {
+  display: none;
+}
+
+main section {
+  max-width: 96rem;
+}
+
+main section form {
+  color: #434c5d;
+  width: 90%;
+  display: flex;
+}
+
+main section form .avatar-box {
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 33%;
+}
+
+main section form .avatar-box .avatar-edit {
+  cursor: pointer;
+  position: relative;
+  margin-top: 2rem;
+}
+
+main section form .avatar-box .avatar-edit .avatar-mask {
+  width: 15.3rem;
+  height: 15.3rem;
+  border-radius: 50%;
+  background: url("/img/lena-avatar.jpg");
+  background-position: 25% 20%;
+}
+
+main section form .avatar-box .avatar-edit button {
+  cursor: pointer;
+  width: 15.3rem;
+  height: 2.6rem;
+  border: 0.2rem solid #3992ff;
+  color: #a1a8b4;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  background: white;
+  position: absolute;
+  bottom: -0.5rem;
+}
+
+main section form .form-box {
+  width: 67%;
+  flex-grow: 3;
+}
+
+main section form .form-box .box-for-input {
+  margin: 3rem 0;
+  position: relative;
+  height: 4rem;
+  width: 100%;
+}
+
+main section form .form-box .box-for-input input {
+  width: 100%;
+  height: 100%;
+  padding-top: 0.5rem;
+  border: 0;
+  outline: 0;
+  font-size: 1.5rem;
+  color: #434c5d;
+}
+
+main section form .form-box .box-for-input label {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  border-bottom: 0.01rem solid #a1a8b4;
+  font-size: 1.5rem;
+}
+
+main section form .form-box .box-for-input label::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -0.1rem;
+  height: 0%;
+  width: 0%;
+  border-bottom: 0.001rem solid #3992ff;
+}
+
+main section form .form-box .box-for-input label .content-input {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+  color: #a1a8b4;
+}
+
+main section form .form-box .box-for-input input:not(:placeholder-shown) + label .content-input {
+  transform: translateY(-150%);
+  font-size: 1.2rem;
+}
+
+main section form .form-box .box-for-input input:not(:placeholder-shown) + label::after {
+  width: 100%;
+  border-bottom: 0.1rem solid #3992ff;
+}
+
+main section form .form-box .box-for-input {
+  position: relative;
+}
+
+main section form .form-box .box-for-input .add-btn {
+  position: absolute;
+  right: -14rem;
+  top: -1.5rem;
+  border: none;
+  background: #3992ff;
+  color: white;
+  padding: 1.4rem 3rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+main section form .form-box .box-for-input .add-btn:hover {
+  color: #b5d7ff;
+}
+
+main section form .form-box .box-with-add-btn {
+  width: auto;
+  margin-right: 14rem;
+}
+
+main section form .form-box .box-with-add-btn input {
+  width: 100%;
+}
+
+main section form .form-box .box-with-add-btn label {
+  width: 100%;
+}
+
+main section form .form-box #languages-container,
+main section form .form-box #achievements-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main section form .form-box #languages-container .box,
+main section form .form-box #achievements-container .box {
+  word-wrap: break-word;
+  max-width: 100%;
+  margin: 0.5rem;
+  margin-left: -0;
+  border-radius: 0.5rem;
+  background-color: #3992ff;
+  color: white;
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  position: relative;
+}
+
+main section form .form-box #languages-container .box p,
+main section form .form-box #achievements-container .box p {
+  word-wrap: break-word;
+  margin-right: 5rem;
+}
+
+main section form .form-box #languages-container .box i,
+main section form .form-box #achievements-container .box i {
+  font-size: 2.5rem;
+  position: absolute;
+  cursor: pointer;
+  right: 1rem;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main section form .form-box .box-for-textarea {
+  position: relative;
+}
+
+main section form .form-box .box-for-textarea textarea {
+  font-size: 1.5rem;
+  resize: none;
+  padding: 0.5rem;
+  width: 100%;
+  height: 15rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #a1a8b4;
+  margin-top: 2.5rem;
+}
+
+main section form .form-box .box-for-textarea label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #a1a8b4;
+  font-size: 1.2rem;
+}
+
+main section form .form-box .label-for-dropdown {
+  font-size: 1.2rem;
+  color: #a1a8b4;
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+main section form .form-box .selector-wrapper {
+  padding-bottom: 2rem;
+}
+
+main section form .form-box .selector-wrapper .select-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+}
+
+main section form .form-box .selector-wrapper .select-box .options-container {
+  position: absolute;
+  background-color: white;
+  top: 4rem;
+  width: 100%;
+  box-shadow: 0 0 0.1rem #585b61;
+  font-size: 1.6rem;
+  color: #434c5d;
+  display: none;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.2s;
+  border-radius: 0.5rem;
+}
+
+main section form .form-box .selector-wrapper .select-box .options-container.active {
+  display: block;
+  max-height: 24rem;
+  opacity: 1;
+  background-color: white;
+  z-index: 10;
+}
+
+main section form .form-box .selector-wrapper .select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+  top: -0.6rem;
+}
+
+main section form .form-box .selector-wrapper .select-box .option,
+main section form .form-box .selector-wrapper .select-box .selected {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+main section form .form-box .selector-wrapper .select-box .option:hover {
+  background-color: #e0eaf5;
+}
+
+main section form .form-box .selector-wrapper .select-box label {
+  cursor: pointer;
+}
+
+main section form .form-box .selector-wrapper .select-box .selected {
+  font-size: 1.6rem;
+  color: #a1a8b4;
+  padding-left: 0.85rem;
+  font-weight: 600;
+  position: relative;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.1rem #585b61;
+}
+
+main section form .form-box .selector-wrapper .select-box .selected::after {
+  content: "";
+  background: url("/img/arrow-dropdown.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 2.2rem;
+  top: 0.6rem;
+  right: 1rem;
+}
+
+main section form .form-box input[type="submit"] {
+  text-transform: uppercase;
+  border: 0;
+  background: #3992ff;
+  color: white;
+  padding: 2.5rem;
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  transition: 0.5s;
+  letter-spacing: 0.2rem;
+  padding: 2rem 5rem;
+  display: block;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: auto;
+}
+
+main section form .form-box input[type="submit"]:hover {
+  color: #b5d7ff;
+}
+/*# sourceMappingURL=userPageSettings.css.map */

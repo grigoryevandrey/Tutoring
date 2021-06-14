@@ -6,11 +6,156 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/userPageSettings.css">
+    <link rel="stylesheet" href="/css/mobileNavResponsivenessForLogged.css">
+    <!-- END CSS -->
+    <!-- JS -->
+    <script defer src="/js/header-mobile.js"></script>
+    <script defer src="/js/customDropdownMenu.js"></script>
+    <script defer src="/js/addToContainer.js"></script>
+    <!-- END JS -->
 </head>
 
 <body>
-    <h1>UserSettings</h1>
+    <div class="wrapper">
+        <header>
+            <h1 class="logo">
+                L2P.RU
+            </h1>
+            <nav class="not-display-mob nav-expanded">
+                <ul>
+                    <li>
+                        <a href="/search">Поиск</a>
+                    </li>
+                    <li>
+                        <a href="/login">Вход</a>
+                    </li>
+                    <li>
+                        <a href="/registerStudent">Регистрация</a>
+                    </li>
+                    <li class="not-display-desktop not-display-unauthorized">
+                        <h2>Уроки</h2>
+                    </li>
+                    <li class="not-display-desktop not-display-unauthorized"><a
+                            href="/unscheduledHours">Незапланированные часы</a></li>
+                    <li class="not-display-desktop not-display-unauthorized"><a href="/listView">Список</a></li>
+                    <li class="not-display-desktop not-display-unauthorized"><a href="/calendarView">Календарь</a></li>
+                    <li class="not-display-desktop not-display-unauthorized"><a href="/reviews">Отзывы</a></li>
+                    <li class="not-display-desktop not-display-unauthorized"><a href="/history">История</a></li>
+                    <li class="not-display-desktop not-display-unauthorized">
+                        <h2>Настройки</h2>
+                    </li>
+                    <li class="not-display-desktop not-display-unauthorized"><a href="/userPageSettings">Профиль</a>
+                    </li>
+                    <li class="not-display-desktop not-display-unauthorized"><a href="/contacts">Контактная
+                            информация</a></li>
+                    <li class="not-display-desktop not-display-unauthorized not-display-student"><a
+                            href="/pricing">Расценки</a></li>
+                    <li class="not-display-desktop not-display-unauthorized not-display-student"><a
+                            href="/availability">Доступность</a>
+                    </li>
+                    <li class="not-display-desktop not-display-unauthorized"><a href="/logout">Выход</a></li>
+                </ul>
+            </nav>
+            <i class="fas fa-bars display-mob" id="burgerNav"></i>
+            <i class="fas fa-times not-display-mob" id="closeNavMob"></i>
+        </header>
+        <main>
+            <aside>
+                <ul>
+                    <h2>Уроки</h2>
+                    <li><a href="/unscheduledHours">Незапланированные часы</a></li>
+                    <li><a href="/listView">Список</a></li>
+                    <li><a href="/calendarView">Календарь</a></li>
+                    <li><a href="/reviews">Отзывы</a></li>
+                    <li><a href="/history">История</a></li>
+                    <h2>Настройки</h2>
+                    <li><a href="/userPageSettings">Профиль</a></li>
+                    <li><a href="/contacts">Контактная информация</a></li>
+                    <li class="not-display-student"><a href="/pricing">Расценки</a></li>
+                    <li class="not-display-student"><a href="/availability">Доступность</a></li>
+                    <li><a href="/logout">Выход</a></li>
+                </ul>
+            </aside>
+            <section>
+                <form>
+                    <div class="avatar-box">
+                        <div class="avatar-edit">
+                            <div class="avatar-mask">
+                                <!-- <img src="/img/lena-avatar.jpg" alt=""> -->
+                            </div>
+                            <button>Сменить фото</button>
+                        </div>
+                    </div>
+                    <div class="form-box">
+                        <div class="box-for-input">
+                            <input type="text" name="first-name-input" id="first-name-input" placeholder=" ">
+                            <label for="first-name-input"><span class="content-input">Имя</span></label>
+                        </div>
+                        <div class="box-for-input">
+                            <input type="text" name="last-name-input" id="last-name-input" placeholder=" ">
+                            <label for="last-name-input"><span class="content-input">Фамилия</span></label>
+                        </div>
+                        <div class="box-for-input">
+                            <input type="text" name="nickname-input" id="nickname-input" placeholder=" ">
+                            <label for="nickname-input"><span class="content-input">Никнейм</span></label>
+                        </div>
+                        <label class="label-for-dropdown">Игра</label>
+                        <div class="selector-wrapper" id="selector-game">
+                            <div class="select-box">
+                                <div class="options-container">
+                                    <div class="option">
+                                        <input type="radio" class="radio" name="fortnite" id="fortnite" />
+                                        <label for="fortnite">Fortnite</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" class="radio" name="dota" id="dota" />
+                                        <label for="dota">Dota 2</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" class="radio" name="csgo" id="csgo" />
+                                        <label for="csgo">CS:GO</label>
+                                    </div>
+                                </div>
+                                <div class="selected">
+                                    Выберите игру...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-for-input box-with-add-btn">
+                            <input type="text" name="language-input" id="language-input" placeholder=" ">
+                            <label for="language-input"><span class="content-input">Язык</span></label>
+                            <button class="add-btn" id="add-language">Добавить</button>
+                        </div>
+                        <div id="languages-container">
+                            <div class="box">
+                                <p>
+                                    Русский
+                                </p>
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+                        <div class="box-for-input box-with-add-btn">
+                            <input type="text" name="achievements-input" id="achievements-input" placeholder=" ">
+                            <label for="achievements-input"><span class="content-input">Достижения</span></label>
+                            <button class="add-btn" id="add-achievement">Добавить</button>
+                        </div>
+                        <div id="achievements-container"></div>
+                        <div class="box-for-textarea">
+                            <textarea id="info-input" name="info-input"></textarea>
+                            <label for="info-input">Информация о вас</label>
+                        </div>
+                        <input type="submit" value="СОХРАНИТЬ">
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
 </body>
 
 </html>
